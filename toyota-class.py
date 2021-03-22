@@ -1,9 +1,17 @@
+# https://github.com/khuyentran1401/dog_classifier/blob/main/dog_classifier.py
 from fastai.vision.widgets import *
 from fastai.vision.all import *
 
 from pathlib import Path
 
 import streamlit as st
+
+st.write("""
+# Toyota Model Classifier
+
+Upload image of a Toyota car 
+
+""")
 
 class Predict:
     def __init__(self, filename):
@@ -27,12 +35,12 @@ class Predict:
 
         if st.button('Classify'):
             pred, pred_idx, probs = self.learn_inference.predict(self.img)
-            st.write(f'Prediction: {pred}; Probability: {probs[pred_idx]:.04f}')
+            st.write(f'Prediction: Toyota {pred}; Probability: {probs[pred_idx]:.04f}')
         else: 
             st.write(f'Click the button to classify') 
 
 if __name__=='__main__':
 
-    file_name='model_resnext50_32x4d.pkl'
+    file_name='model_resnet101.pkl'
 
     predictor = Predict(file_name)
