@@ -1,4 +1,0 @@
-streamlit 
-pathlib
-fastbook==0.0.16
-fastai==2.2.7
