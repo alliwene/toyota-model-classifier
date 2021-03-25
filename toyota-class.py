@@ -28,7 +28,6 @@ class Predict:
             return PILImage.create((uploaded_file))
         return None
     
-    @st.cache
     def display_output(self):
         st.image(self.img.to_thumb(500,500), caption='Uploaded Image')
 
