@@ -21,7 +21,6 @@ class Predict:
             self.display_output()
             self.get_prediction()
     
-    @st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
     @staticmethod
     def get_image_from_upload():
         uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg', 'jpg'])
