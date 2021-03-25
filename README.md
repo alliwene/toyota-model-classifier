@@ -1,3 +1,4 @@
 # toyota-model-classifier
- 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/alliwene/toyota-model-classifier/main/toyota-class.py)
+
 This project deals with classifying different Toyota brands using fast.ai. Images for different Toyota models were gotten using Bing search API, and cleaned removing failed downloads and pallete images [here](https://github.com/alliwene/toyota-model-classifier/blob/main/gather_data.ipynb). Simple Exploratory data analysis was done [here](https://github.com/alliwene/toyota-model-classifier/blob/main/eda_toyota.ipynb). Resnet101 pretrained model was used to solve the problem with about 60% accuracy [here](https://github.com/alliwene/toyota-model-classifier/blob/main/toyota_model_classification.ipynb). Streamlit app was created using [this](https://github.com/alliwene/toyota-model-classifier/blob/main/toyota-class.py).
