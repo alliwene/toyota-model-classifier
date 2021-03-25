@@ -22,7 +22,6 @@ class Predict:
             self.get_prediction()
     
     @staticmethod
-    @st.cache(ttl=3600, max_entries=10)
     def get_image_from_upload():
         uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg', 'jpg'])
         if uploaded_file is not None:
