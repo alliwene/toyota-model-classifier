@@ -1,0 +1,4 @@
+streamlit 
+pathlib
+fastbook==0.0.16
+
