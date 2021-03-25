@@ -14,6 +14,7 @@ Upload image of a Toyota car
 """)
 
 class Predict:
+    @st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
     def __init__(self, filename):
         self.learn_inference = load_learner(Path()/filename)
         self.img = self.get_image_from_upload()
@@ -31,7 +32,6 @@ class Predict:
     def display_output(self):
         st.image(self.img.to_thumb(500,500), caption='Uploaded Image')
 
-    @st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
     def get_prediction(self):
 
         if st.button('Classify'):
